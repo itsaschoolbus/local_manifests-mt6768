@@ -3,32 +3,31 @@
   
   <!-- Remotes -->
   <remote name="jbub"
-          fetch="https://github.com/Jbub5" />
-  <remote name="hipex"
-          fetch="https://github.com/hipexscape"
-          revision="15" />
+          fetch="https://github.com/Jbub5"
+          revision="16" />
   <remote name="bus"
-          fetch="https://github.com/itsaschoolbus-stuff" />
+          fetch="https://github.com/itsaschoolbus-stuff"
+          revision="16" />
   <remote name="los"
           fetch="https://github.com/LineageOS"
-          revision="lineage-22.2" />
+          revision="lineage-23.0" />
 
   <!-- Device -->
   <project path="device/xiaomi/merlinx" name="android_device_xiaomi_merlinx" remote="bus" revision="15-qpr2" />
   <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot" remote="jbub" revision="15-QPR2" />
-  <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common-old" remote="bus" revision="15" />
+  <project path="device/xiaomi/mt6768-common" name="android_device_xiaomi_mt6768-common" remote="bus" />
   <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" />
 
   <!-- Vendor -->
-  <project path="vendor/xiaomi/merlinx" name="proprietary_vendor_xiaomi_merlinx" remote="jbub" revision="15" />
-  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot" remote="hipex" />
-  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common" remote="hipex" />
+  <project path="vendor/xiaomi/merlinx" name="proprietary_vendor_xiaomi_merlinx" remote="jbub" />
+  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot" remote="jbub" />
+  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common" remote="jbub" />
 
   <!-- Kernel -->
   <project path="kernel/xiaomi/mt6768" name="android_kernel_xiaomi_mt6768" remote="jbub" revision="kernel-tree" />
 
   <!-- Hardware -->
-  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="bus" revision="lineage-22.2" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="bus" />
   <project path="hardware/mediatek" name="android_hardware_mediatek" remote="bus" revision="lineage-22.2" />
 
 </manifest>
