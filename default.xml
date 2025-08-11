@@ -2,37 +2,33 @@
 <manifest>
   
   <!-- Remotes -->
-  <remote name="ghh"
-          fetch="https://github.com"
-          clone-depth="1" />
-  
-  <remote name="ksawlii"
-          fetch="https://github.com/Ksawlii-Android-Repos" />
-            
+  <remote name="jbub"
+          fetch="https://github.com/Jbub5" />
   <remote name="hipex"
-          fetch="https://github.com/hipexscape" />
-
+          fetch="https://github.com/hipexscape"
+          revision="15" />
   <remote name="bus"
           fetch="https://github.com/itsaschoolbus-stuff" />
+  <remote name="los"
+          fetch="https://github.com/LineageOS"
+          revision="lineage-22.2" />
 
-  <!-- mt6768 -->
-  <project path="device/xiaomi/mt6768-common" name="android_device_xiaomi_mt6768-common" remote="bus" revision="15"/> 
-  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common" remote="hipex" revision="15"/>
-  <project path="kernel/xiaomi/mt6768" name="Jbub5/android_kernel_xiaomi_mt6768" remote="ghh" revision="kernel-tree-wip"/>
+  <!-- Device -->
+  <project path="device/xiaomi/merlinx" name="android_device_xiaomi_merlinx" remote="bus" revision="15-qpr2" />
+  <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot" remote="jbub" revision="15-QPR2" />
+  <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common-old" remote="bus" revision="15" />
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" remote="los" />
 
-  <!-- xiaomi stuff -->
-  <project path="hardware/xiaomi" name="hardware_xiaomi" remote="ksawlii" revision="lineage-22.2"/>
-  
-  <!-- mediatek stuff -->
-  <project path="hardware/mediatek" name="Muichiro-mt6768/hardware_mediatek" remote="ghh" revision="lineage-22.2"/>
-  <project path="device/mediatek/sepolicy_vndr" name="LineageOS/android_device_mediatek_sepolicy_vndr" remote="ghh" revision="lineage-22.2"/>
+  <!-- Vendor -->
+  <project path="vendor/xiaomi/merlinx" name="proprietary_vendor_xiaomi_merlinx" remote="jbub" revision="15" />
+  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot" remote="hipex" />
+  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common" remote="hipex" />
 
-  <!-- vendor -->
-  <project path="vendor/xiaomi/merlinx" name="Jbub5/proprietary_vendor_xiaomi_merlinx" remote="ghh" revision="15"/>
-  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot" remote="hipex" revision="15" />
+  <!-- Kernel -->
+  <project path="kernel/xiaomi/mt6768" name="android_kernel_xiaomi_mt6768" remote="jbub" revision="kernel-tree" />
 
-  <!-- device -->
-  <project path="device/xiaomi/merlinx" name="android_device_xiaomi_merlinx" remote="bus" revision="15-qpr2"/>
-  <project path="device/xiaomi/lancelot" name="Jbub5/device_xiaomi_lancelot" remote="ghh" revision="15-QPR2"/>
+  <!-- Hardware -->
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="bus" revision="lineage-22.2" />
+  <project path="hardware/mediatek" name="android_hardware_mediatek" remote="bus" revision="lineage-22.2" />
 
 </manifest>
